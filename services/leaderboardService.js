@@ -75,7 +75,7 @@ async function getTopN({ limit = 10, mode, region } = {}) {
     String(limit - 1),
     'WITHSCORES'
   ]);
-  console.log(raw)
+  console.log(raw) // [ 'mk123', '10' ]
   const result = [];
   for (let i = 0; i < raw.length; i += 2) {
     const playerId = raw[i];
